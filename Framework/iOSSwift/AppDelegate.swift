@@ -41,6 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaultDebugLevel = ddloglevel
         
         printSomething()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        (UIApplication.shared.delegate as! AppDelegate).window!.rootViewController = ViewController()
         
 		return true
 	}
